@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Novotic.Models.DetalleVentum>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center py-5 pt-0 my-0"> DETALLES DE VENTAS</h1>
+
+<p>
+    <a asp-action="Create">
+        <input class="btn btn-primary" type="submit" value="Crear Nuevo" />
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioUnitarioDetalleVenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadDetalleVenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorTotalDetalleVenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubtotalDetalleVenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoVenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoProducto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioUnitarioDetalleVenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadDetalleVenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorTotalDetalleVenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubtotalDetalleVenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoVenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoProducto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CodigoDetalleVenta">
+                        <input class="btn btn-warning" type="submit" value="Editar" />
+                </a> 
+                <a asp-action="Details" asp-route-id="@item.CodigoDetalleVenta">
+                        <input class="btn btn-success" type="submit" value="Detalle" />
+                </a> 
+                <a asp-action="Delete" asp-route-id="@item.CodigoDetalleVenta">
+                        <input class="btn btn-danger" type="submit" value="Eliminar" />
+                </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

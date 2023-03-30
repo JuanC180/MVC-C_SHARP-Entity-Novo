@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Novotic</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Novotic.styles.css" asp-append-version="true" />
+
+ 
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"> </script>
+</head>
+<body class="control" id="body">
+
+
+
+
+    <div class="demo">
+        <header class="py-0 ">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid mx-sm-1 mx-1 mx-lg-5">
+
+                    <a class="navbar-brand" asp-controller="Home" asp-action="Index" >
+                        <img id="imgLogo" src="https://www.novomatic.com/themes/novomatic/images/novomatic_n.svg" alt="Bootstrap" width="45" height="45">
+                    </a>
+                    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
+                        <ul class="navbar-nav d-flex justify-content-center align-items-center gap-1 gap-lg-4 my-2">
+                            <li class="nav-item hover-header py-2 ">
+                                <a class="text-decoration-none text-white " href="./loginNovo.html">
+                                    Cerrar Sesión
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    
+
+
+
+
+        <aside class="col-12 col-md-2 px-0  menu__side " id="menu_side">
+
+            <!-- <div class="d-flex justify-content-center align-items-center gap-3 my-0 name__page">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg>
+
+                <p class="mb-0">Nombre</p>
+            </div> -->
+
+            <div class="name__page">
+                <i class="">
+                    <img class="rounded-circle" src="https://e7.pngegg.com/pngimages/164/153/png-clipart-donut-the-simpsons-tapped-out-doughnut-homer-simpson-bart-simpson-krusty-the-clown-donut-food-bagel.png" alt="batman " title="batman" width="40" height="40">
+                </i>
+                <!-- <a href="https://static.wikia.nocookie.net/logopedia/images/5/56/Batman_Logo.svg/revision/latest?cb=20211128023405&amp;path-prefix=es" class="image"><img alt="Batman Logo.svg" src="https://static.wikia.nocookie.net/logopedia/images/5/56/Batman_Logo.svg/revision/latest/scale-to-width-down/250?cb=20211128023405&amp;path-prefix=es" decoding="async" loading="lazy" width="250" height="142" data-image-name="Batman Logo.svg" data-image-key="Batman_Logo.svg" data-src="https://static.wikia.nocookie.net/logopedia/images/5/56/Batman_Logo.svg/revision/latest/scale-to-width-down/250?cb=20211128023405&amp;path-prefix=es" class=" lazyloaded"></a> -->
+                <h4 class="px-4">Nombre X</h4>
+            </div>
+
+            <ul class=" d-flex flex-column justify-content-start w-100 px-0 my-0 mx-0 options__menu">
+
+                <a class="px-5 py-2 border-bottom border-dark text-decoration-none d-flex justify-content-start align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                    <div class="option">
+                        <!-- <i class="fas fa-home" title="inicio"></i> -->
+                        <i class="fa-solid fa-house-chimney-window" title="INICIO"></i>
+                        <h4 class="my-0">INICIO</h4>
+                    </div>
+                </a>
+
+
+                <a class="px-5 py-2 border-bottom border-dark text-decoration-none d-flex justify-content-start align-items-center" asp-area="" asp-controller="Productoes" asp-action="Index">
+                    <div class="option">
+                        <!-- <i class="fas fa-home" title="inicio"></i> -->
+                        <i class="fa-solid fa-box-open" title="Productos"></i>
+                        <h4 class="my-0">Productos</h4>
+                    </div>
+                </a>
+
+                <a class="px-5 py-2 border-bottom border-dark text-decoration-none" asp-area="" asp-controller="Clientes" asp-action="Index">
+                    <div class="option">
+                        <i class="fa-solid fa-user-tie" title="Clientes"></i>
+                        <h4 class="my-0">Clientes</h4>
+                    </div>
+
+                </a>
+<!-- 
+                <a class="px-5 py-2 border-bottom border-dark" href="listarUsuarios.html">
+                    <div class="option">
+                        <i class="fa-solid fa-user" title="Usuarios"></i>
+                        <h4 class="my-0">Usuarios</h4>
+                    </div>
+                </a>
+                -->
+                <a class="px-5 py-2 border-bottom border-dark text-decoration-none" asp-area="" asp-controller="Ventums" asp-action="Index">
+                    <div class="option">
+                        <i class="fa-solid fa-sack-dollar" title="Ventas"></i>
+                        <h4 class="my-0">Ventas</h4>
+                    </div>
+                </a>
+
+                <a class="px-5 py-2 border-bottom border-dark text-decoration-none" asp-area="" asp-controller="Carteras" asp-action="Index">
+                    <div class="option">
+                        <i class="fa-solid fa-wallet" title="Cartera"></i>
+                        <h4 class="my-0">Cartera</h4>
+                    </div>
+                </a>
+
+                <a class="px-5 py-2 border-bottom border-dark text-decoration-none" asp-area="" asp-controller="DetalleVentums" asp-action="Index">
+                    <div class="option">
+                        <i class="fa-solid fa-file-lines" title="Cartera"></i>
+                        <h4 class="my-0">Detalles</h4>
+                    </div>
+                </a>
+                
+            </ul>
+        </aside>
+
+
+
+
+
+
+        <main class="container-fluid ">
+            <div class="row">
+                <div class="icon__menu pt-3 pb-0" id="icon__menu">
+                    <i class="fas fa-bars" id="btn_open"></i>
+                </div>
+
+                <section class="pb-5" id="sectionID">
+                    <!-- 
+                        <h1 class="text-center py-5 pt-0 my-0">CREAR PRODUCTO</h1>
+                    -->
+
+                    <!-- formulario -->
+                   
+
+
+                    <div class="container">
+                        <main role="main" class="pb-3">
+                            <main role="main" class="pb-3">
+                                @RenderBody()
+                            </main>
+                    </div>
+
+                </section>
+            </div>
+        </main>
+
+
+
+
+
+
+
+        <footer class="main__footer d-flex justify-content-between  py-4">
+            <div class="ms-5 ">
+                <strong>Copyright © 2014-2023 <a href="https://www.novomatic.com">Novamatic</a>.</strong> All rights reserved.
+            </div>
+
+            <div class="float-right d-none d-sm-block me-5">
+                <b>Version</b> 1.0.0
+            </div>
+        </footer>
+
+
+
+
+    </div>
+
+
+
+    <!-- C# -->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Novotic</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Carteras" asp-action="Index">Cartera</a>
+                        </li>
+
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">Cliente</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="DetalleVentums" asp-action="Index">Detalle</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Productoes" asp-action="Index">Productoes</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TipoRols" asp-action="Index">Roles</a>
+                        </li>
+
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Ventums" asp-action="Index">Venta</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- 
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Novotic - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="js/script.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

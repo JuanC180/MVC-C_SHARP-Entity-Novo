@@ -1,0 +1,286 @@
+html {
+  font-size: 14px;
+}
+
+
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+
+
+
+
+<!-- //////////////////// -->
+
+
+
+
+
+
+
+* {
+    list-style: none;
+    text-decoration: none !important;
+}
+
+#imgLogo {
+    background-color: white;
+    border-radius: 50%;
+}
+
+header {
+    background-color: #021F59;
+}
+
+.hover-header:hover {
+    background-color: #41AED9;
+    width: 100% !important;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .hover-header:hover {
+        background-color: #021F59;
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+aside {
+    /* background-color: #F2F2F2; */
+    background-color: rgb(230, 230, 230);
+}
+
+    aside ul a {
+        color: #000;
+        background-color: #fff;
+    }
+
+        aside ul a:hover {
+            background-color: #41AED9;
+            color: #fff;
+        }
+
+section {
+    /* background-color: rgb(238, 238, 238); */
+    background-color: rgb(247, 246, 246);
+    height: auto;
+}
+
+.btn-styles {
+    background-color: #021F59;
+}
+
+.control {
+    position: relative;
+}
+
+
+/* ===================== MENU ASIDE O MENU LATERAL =========================== */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    /* margin-left: 80px; */
+    transition: margin-left 300ms cubic-bezier(0.758, 0.135, 0.15, 0.86);
+}
+
+
+.icon__menu {
+    position: relative;
+    top: 0px;
+    left: -10px;
+    width: 50px;
+    height: 100%;
+    transform: translateX(10px);
+    background-color: rgb(219, 31, 31);
+}
+
+    .icon__menu i {
+        font-size: 20px;
+        cursor: pointer;
+        position: absolute;
+    }
+
+#icon__menu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    z-index: 200;
+    background-color: rgb(247 246 246);
+    padding-left: 13px;
+}
+
+.menu__side {
+    width: 80px;
+    height: 100%;
+    background-color: rgb(230, 230, 230);
+    /* position: fixed; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    /* border-right: 20px solid #1783db; */
+    border-right: 0px solid rgb(230, 230, 230);
+    transition: all 300ms cubic-bezier(0.758, 0.135, 0.15, 0.86);
+}
+
+
+    /* ocultar scroll para chrome, safari y opera */
+    .menu__side::-webkit-scrollbar {
+        display: none;
+    }
+
+.menu__side {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.name__page {
+    padding: 12px 17px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #000;
+}
+
+    .name__page i {
+        width: 28px;
+        margin-right: 20px;
+    }
+
+.options__menu {
+    margin: 20px 10px;
+    position: absolute;
+    top: 80px;
+}
+
+    .options__menu ul a {
+        color: #000;
+        background-color: #fff;
+        cursor: default;
+        display: block;
+        position: relative;
+        transition: color 300ms;
+    }
+
+        .options__menu ul a:hover {
+            background-color: #41AED9;
+            color: rgb(0, 0, 0);
+        }
+
+    .options__menu .option {
+        /* padding: 20px 0px; */
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+        .options__menu .option i {
+            width: 20px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .options__menu .option h4 {
+            font-weight: 300;
+            cursor: pointer;
+        }
+
+a.selected {
+    color: #fff;
+}
+
+.selected:before {
+    content: '';
+    width: 3px;
+    height: 80%;
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
+/* Clases para usar en Javascript */
+.body_move {
+    /* margin-left: 250px; */
+    padding-left: 250px;
+}
+
+.menu__side_move {
+    width: 250px
+}
+
+.demo {
+    /* border: 5px solid red; */
+    margin-left: 80px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width: 768px) {
+    .body_move {
+        margin-left: -250px;
+        padding-left: 170px;
+        /* padding-left: 250px; */
+    }
+
+    .demo {
+        margin-left: 0px;
+    }
+
+    .menu__side_move {
+        width: 80px;
+        left: -80px;
+    }
+
+    .icon__menu_move {
+        padding-left: 90px !important;
+    }
+
+    .seccion_principal_move {
+        padding-left: 80px;
+    }
+}
+
+
+
+.main__footer {
+    /* background-color: #021F59; */
+    background-color: #162A3E;
+    /* background-color: #E9EFF5; */
+    /* background-color: #4BAEE2; */
+}
+
+    .main__footer > div {
+        color: #fff;
+    }
+

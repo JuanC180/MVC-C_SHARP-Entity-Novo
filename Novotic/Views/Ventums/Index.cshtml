@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Novotic.Models.Ventum>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center py-5 pt-0 my-0"> VENTA</h1>
+
+<p>
+    <a asp-action="Create">
+        <input class="btn btn-primary" type="submit" value="Crear Nuevo" />
+    </a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaVenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorTotalVenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCliente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaVenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorTotalVenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCliente)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CodigoVenta">
+                        <input class="btn btn-warning" type="submit" value="Editar" />
+                </a> 
+                <a asp-action="Details" asp-route-id="@item.CodigoVenta">
+                        <input class="btn btn-success" type="submit" value="Detalle" />
+                </a> 
+                <a asp-action="Delete" asp-route-id="@item.CodigoVenta">
+                        <input class="btn btn-danger" type="submit" value="Eliminar" />
+                </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

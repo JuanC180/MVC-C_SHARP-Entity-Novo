@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Novotic.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CedulaCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefonoCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DireccionCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CamaraComercioCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NitRutCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartamentoCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CiudadCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PasswordCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RolCliente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CedulaCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonoCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DireccionCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CamaraComercioCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NitRutCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartamentoCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CiudadCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PasswordCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RolCliente)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdCliente">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdCliente">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdCliente">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

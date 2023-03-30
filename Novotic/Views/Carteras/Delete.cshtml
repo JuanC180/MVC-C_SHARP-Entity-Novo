@@ -1,0 +1,59 @@
+﻿@model Novotic.Models.Cartera
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Eliminar</h1>
+
+<h3 class="alert-danger py-3">¿Esta seguro que quiere eliminar esto?</h3>
+<div>
+    <h4>Cartera</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaCartera)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaCartera)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoutaRestanteCartera)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoutaRestanteCartera)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PendienteCartera)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PendienteCartera)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EstadoCartera)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EstadoCartera)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdCliente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdCliente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CodigoVenta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CodigoVenta)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CodigoCartera" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">
+            <input class="btn btn-dark" type="submit" value="Volver" />
+        </a>
+    </form>
+</div>

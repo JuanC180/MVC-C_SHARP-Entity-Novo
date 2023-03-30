@@ -1,0 +1,66 @@
+﻿@model Novotic.Models.Cartera
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="text-center py-5 pt-0 my-0">CREAR CARTERA</h1>
+
+<h4>Cartera</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FechaCartera" class="control-label"></label>
+                <input asp-for="FechaCartera" class="form-control" />
+                <span asp-validation-for="FechaCartera" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoutaRestanteCartera" class="control-label"></label>
+                <input asp-for="CoutaRestanteCartera" class="form-control" />
+                <span asp-validation-for="CoutaRestanteCartera" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PendienteCartera" class="control-label"></label>
+                <input asp-for="PendienteCartera" class="form-control" />
+                <span asp-validation-for="PendienteCartera" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="EstadoCartera" /> @Html.DisplayNameFor(model => model.EstadoCartera)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCliente" class="control-label"></label>
+                <input asp-for="IdCliente" class="form-control" />
+                <span asp-validation-for="IdCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodigoVenta" class="control-label"></label>
+                <input asp-for="CodigoVenta" class="form-control" />
+                <span asp-validation-for="CodigoVenta" class="text-danger"></span>
+            </div>
+
+
+            <div class="d-flex justify-content-center  w-100 my-3">
+                <div class="div_botones form-group ms-sm-0  w-100">
+                    <input type="submit" value="Create" class="btn btn-dark w-100 btn-styles" />
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">
+        <input class="btn btn-dark" type="submit" value="Volver" />
+    </a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

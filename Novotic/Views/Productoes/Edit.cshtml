@@ -1,0 +1,65 @@
+﻿@model Novotic.Models.Producto
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Producto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CodigoProducto" />
+            <div class="form-group">
+                <label asp-for="NombreProducto" class="control-label">Nombre </label>
+                <input asp-for="NombreProducto" class="form-control" />
+                <span asp-validation-for="NombreProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioPrducto" class="control-label">Precio</label>
+                <input asp-for="PrecioPrducto" class="form-control" />
+                <span asp-validation-for="PrecioPrducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescripcionProducto" class="control-label">Descripcion</label>
+                <input asp-for="DescripcionProducto" class="form-control" />
+                <span asp-validation-for="DescripcionProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imagen" class="control-label"></label>
+                <input asp-for="Imagen" class="form-control" />
+                <span asp-validation-for="Imagen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estado" class="control-label"></label>
+                <input asp-for="Estado" class="form-control" />
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex justify-content-center  w-100 my-4">
+                <div class="div_botones form-group ms-sm-0  w-100">
+                    <input type="submit" value="Guardar" class="btn btn-dark w-100 btn-styles" />
+                </div>
+            </div>
+
+            <!-- 
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+            -->
+        </form>
+    </div>
+</div>
+
+<div class ="my-2">
+    <a asp-action="Index" >
+        <input class="btn btn-dark" type="submit" value="Volver" />
+    </a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,59 @@
+﻿@model Novotic.Models.DetalleVentum
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>DetalleVentum</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CodigoDetalleVenta" />
+            <div class="form-group">
+                <label asp-for="PrecioUnitarioDetalleVenta" class="control-label"></label>
+                <input asp-for="PrecioUnitarioDetalleVenta" class="form-control" />
+                <span asp-validation-for="PrecioUnitarioDetalleVenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CantidadDetalleVenta" class="control-label"></label>
+                <input asp-for="CantidadDetalleVenta" class="form-control" />
+                <span asp-validation-for="CantidadDetalleVenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorTotalDetalleVenta" class="control-label"></label>
+                <input asp-for="ValorTotalDetalleVenta" class="form-control" />
+                <span asp-validation-for="ValorTotalDetalleVenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubtotalDetalleVenta" class="control-label"></label>
+                <input asp-for="SubtotalDetalleVenta" class="form-control" />
+                <span asp-validation-for="SubtotalDetalleVenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodigoVenta" class="control-label"></label>
+                <input asp-for="CodigoVenta" class="form-control" />
+                <span asp-validation-for="CodigoVenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodigoProducto" class="control-label"></label>
+                <input asp-for="CodigoProducto" class="form-control" />
+                <span asp-validation-for="CodigoProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

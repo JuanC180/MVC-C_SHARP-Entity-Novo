@@ -1,0 +1,94 @@
+﻿@model Novotic.Models.Cliente
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Cliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdCliente" />
+            <div class="form-group">
+                <label asp-for="CedulaCliente" class="control-label"></label>
+                <input asp-for="CedulaCliente" class="form-control" />
+                <span asp-validation-for="CedulaCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreCliente" class="control-label"></label>
+                <input asp-for="NombreCliente" class="form-control" />
+                <span asp-validation-for="NombreCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApellidoCliente" class="control-label"></label>
+                <input asp-for="ApellidoCliente" class="form-control" />
+                <span asp-validation-for="ApellidoCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailCliente" class="control-label"></label>
+                <input asp-for="EmailCliente" class="form-control" />
+                <span asp-validation-for="EmailCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelefonoCliente" class="control-label"></label>
+                <input asp-for="TelefonoCliente" class="form-control" />
+                <span asp-validation-for="TelefonoCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DireccionCliente" class="control-label"></label>
+                <input asp-for="DireccionCliente" class="form-control" />
+                <span asp-validation-for="DireccionCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CamaraComercioCliente" class="control-label"></label>
+                <input asp-for="CamaraComercioCliente" class="form-control" />
+                <span asp-validation-for="CamaraComercioCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NitRutCliente" class="control-label"></label>
+                <input asp-for="NitRutCliente" class="form-control" />
+                <span asp-validation-for="NitRutCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepartamentoCliente" class="control-label"></label>
+                <input asp-for="DepartamentoCliente" class="form-control" />
+                <span asp-validation-for="DepartamentoCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CiudadCliente" class="control-label"></label>
+                <input asp-for="CiudadCliente" class="form-control" />
+                <span asp-validation-for="CiudadCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoCliente" class="control-label"></label>
+                <input asp-for="EstadoCliente" class="form-control" />
+                <span asp-validation-for="EstadoCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PasswordCliente" class="control-label"></label>
+                <input asp-for="PasswordCliente" class="form-control" />
+                <span asp-validation-for="PasswordCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RolCliente" class="control-label"></label>
+                <input asp-for="RolCliente" class="form-control" />
+                <span asp-validation-for="RolCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

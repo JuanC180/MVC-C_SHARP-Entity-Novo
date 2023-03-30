@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Novotic.Models.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center py-5 pt-0 my-0"> PRODUCTO</h1>
+
+<p>
+    <a asp-action="Create">
+        <input class="btn btn-primary" type="submit" value="Crear Nuevo"/>
+    </a>
+</p>
+
+
+
+
+<main class="container-fluid ">
+    <div class="row">
+        <!-- 
+        <div class="icon__menu pt-3 pb-0" id="icon__menu">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+        -->
+
+        <section class="pb-5" id="sectionID">
+
+        </section>
+    </div>
+</main>
+
+
+
+<table class="table container horizontal-scrollable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioPrducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioPrducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imagen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CodigoProducto">
+                   <input class="btn btn-warning" type="submit" value="Editar"/>
+                </a> 
+                <a asp-action="Details" asp-route-id="@item.CodigoProducto">
+                        <input class="btn btn-success" type="submit" value="Detalle" /> 
+                </a> 
+                <a asp-action="Delete" asp-route-id="@item.CodigoProducto">
+                        <input class="btn btn-danger" type="submit" value="Eliminar" />
+                </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

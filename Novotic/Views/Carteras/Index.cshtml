@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Novotic.Models.Cartera>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center py-5 pt-0 my-0"> CARTERA</h1>
+
+<p>
+    <a asp-action="Create">
+        <input class="btn btn-primary" type="submit" value="Crear Nuevo" />
+    </a>
+</p>
+
+<form asp-controller="Carteras" asp-action="Index">
+    <p>
+        Buscar:
+        <input type="text" name="buscar" class="form-text" />
+        <input type="submit" value="Buscar" class="btn btn-dark" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCartera)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoutaRestanteCartera)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PendienteCartera)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoCartera)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoVenta)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCartera)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoutaRestanteCartera)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PendienteCartera)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoCartera)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoVenta)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CodigoCartera">
+                        <input class="btn btn-warning" type="submit" value="Editar" />
+                </a> 
+                <a asp-action="Details" asp-route-id="@item.CodigoCartera">
+                        <input class="btn btn-success" type="submit" value="Detalles" />
+                </a> 
+                <a asp-action="Delete" asp-route-id="@item.CodigoCartera">
+                        <input class="btn btn-danger" type="submit" value="Eliminar" />
+                </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
